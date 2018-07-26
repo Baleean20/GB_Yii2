@@ -9,6 +9,7 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\Event;
 
 class SiteController extends Controller
 {
@@ -125,4 +126,17 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
+    public function actionEvent() {
+
+        $event = Event::find()->all();
+
+        return $this->render('event',
+            [
+                'event' => $event
+        ]);
+
+    }
+
+
 }
