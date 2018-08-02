@@ -127,16 +127,6 @@ class SiteController extends Controller
         return $this->render('about');
     }
 
-    public function actionEvent() {
-
-        $event = Event::find()->all();
-
-        return $this->render('event',
-            [
-                'event' => $event
-        ]);
-
-    }
-
+   
 
 }
